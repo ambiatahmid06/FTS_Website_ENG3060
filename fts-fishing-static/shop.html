@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop — FTS Fishing</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-promo">
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">~ Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn open" id="shop-dropdown-btn">Shop
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="shop-dropdown-menu">
+          <a href="shop.html" style="color:var(--gold);">Shop</a>
+          <a href="view-products.html">View Products</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-btn" id="comm-dropdown-btn">Community
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="comm-dropdown-menu">
+          <a href="community.html">Public Community</a>
+          <a href="community.html#guidelines">Community Guidelines</a>
+          <a href="about.html#partners">Contributing Partners</a>
+        </div>
+      </div>
+      <a href="app.html" class="nav-link">App</a>
+      <a href="about.html" class="nav-link">About FTS Fishing</a>
+      <a href="about-the-team.html" class="nav-link">About the Team</a>
+    </div>
+    <div class="nav-icons">
+      <button class="icon-btn" id="search-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="icon-btn" id="cart-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-badge">2</span></button>
+      <button class="icon-btn" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+    </div>
+    <div style="display:flex;align-items:center;gap:.5rem;">
+      <button class="icon-btn" id="cart-btn-mobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-badge">2</span></button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">~ Home</a><a href="shop.html">Shop</a><a href="view-products.html">View Products</a>
+  <a href="custom-hats.html">Custom Hats</a><a href="community.html">Community</a><a href="app.html">App</a>
+  <a href="about.html">About FTS Fishing</a><a href="about-the-team.html">About the Team</a>
+</div>
+
+<div class="page-content">
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </div>
+    <h1>The Shop</h1>
+    <p>Premium fishing apparel for the dedicated shore angler. Built to perform, built to represent.</p>
+  </div>
+  <div class="page-hero-fade"></div>
+</section>
+
+<!-- FILTER TABS -->
+<section style="padding:2rem 0;background:var(--bg2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All Products</button>
+      <button class="filter-tab" data-filter="mens">Men's Gear</button>
+      <button class="filter-tab" data-filter="coming-soon">Coming Soon</button>
+      <button class="filter-tab" data-filter="popular">Most Popular</button>
+      <button class="filter-tab" data-filter="bestseller">Bestseller</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <div class="reveal mb-4">
+      <h2 class="section-title">All Products</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid grid-4">
+
+      <div class="product-item reveal" data-category="hats" data-popular="1" data-name="FTS Anglers Hat" data-cat="Fitted Hats" data-price="$16.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/blob-6074718.png/:/rs=w:600" alt="FTS Anglers Hat" loading="lazy" onerror="this.style.display='none'">
+            <span class="product-badge">Bestseller</span>
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fitted Hats</div>
+            <div class="product-name">FTS Anglers Hat</div>
+            <div class="product-actions">
+              <span class="product-price">$16.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal reveal-delay-1" data-category="hats" data-popular="1" data-name="Tight Lines From The Shore Hat" data-cat="Fitted Hats" data-price="$16.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/46b40991-b5d5-42f2-a875-f7a7aa7b86ba/blob-2100c87.png/:/rs=w:600" alt="Tight Lines Hat" loading="lazy" onerror="this.style.display='none'">
+            <span class="product-badge">Bestseller</span>
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fitted Hats</div>
+            <div class="product-name">Tight Lines From The Shore Hat</div>
+            <div class="product-actions">
+              <span class="product-price">$16.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal reveal-delay-2" data-category="hats" data-name="From the Shore Fishing Cap" data-cat="Fitted Hats" data-price="$16.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/Photoroom_20240406_003102.png/:/rs=w:600" alt="From the Shore Cap" loading="lazy" onerror="this.style.display='none'">
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fitted Hats</div>
+            <div class="product-name">From the Shore Fishing Cap</div>
+            <div class="product-actions">
+              <span class="product-price">$16.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal reveal-delay-3" data-category="hats" data-name="Limited Edition From The Shore Angler Hat" data-cat="Fitted Hats" data-price="$16.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/46b40991-b5d5-42f2-a875-f7a7aa7b86ba/blob-13b42ce.png/:/rs=w:600" alt="Limited Edition Hat" loading="lazy" onerror="this.style.display='none'">
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fitted Hats</div>
+            <div class="product-name">Limited Edition From The Shore Angler Hat</div>
+            <div class="product-actions">
+              <span class="product-price">$16.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal" data-category="coming-soon" data-name="FTS All Over Print Sport Pullover" data-cat="Men's Gear" data-price="$39.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;background:var(--bg2);display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;"><div style="font-size:3rem;">🧥</div><div style="font-size:.7rem;color:var(--muted);margin-top:.5rem;">Sport Pullover</div></div>
+            <span class="product-badge soon">Coming Soon</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men's Gear</div>
+            <div class="product-name">FTS All Over Print Sport Pullover — Coming Soon</div>
+            <div class="product-actions">
+              <span class="product-price">$39.00</span>
+              <button class="btn btn-sm btn-outline">Notify Me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal reveal-delay-1" data-category="mens" data-name="FTS Brand Logo Devon Jones" data-cat="Men's Gear" data-price="$40.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/ols/Photoroom_20240409_015929.jpeg/:/rs=w:600" alt="Devon Jones Pullover" loading="lazy" onerror="this.style.display='none'">
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men's Gear</div>
+            <div class="product-name">FTS Brand Logo Printed on Devon Jones</div>
+            <div class="product-actions">
+              <span class="product-price">$40.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal reveal-delay-2" data-category="mens" data-name="Tight Lines Logo Zip Garment" data-cat="Men's Gear" data-price="$32.00">
+        <div class="product-card">
+          <div class="product-img" style="aspect-ratio:3/4;">
+            <img src="https://img1.wsimg.com/isteam/ip/46b40991-b5d5-42f2-a875-f7a7aa7b86ba/blob-13b42ce.png/:/rs=w:600" alt="Tight Lines Zip Garment" loading="lazy" onerror="this.style.display='none'">
+            <button class="qv-btn" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);opacity:0;white-space:nowrap;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.4rem 1rem;cursor:pointer;transition:opacity .3s;display:flex;align-items:center;gap:.35rem;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Quick View
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men's Gear</div>
+            <div class="product-name">Tight Lines Logo Printed Zip Garment</div>
+            <div class="product-actions">
+              <span class="product-price">$32.00</span>
+              <button class="btn btn-sm btn-gold">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Add CSS for quick view hover -->
+<style>
+.product-item .product-card:hover .qv-btn { opacity: 1 !important; }
+.product-img { position: relative; }
+</style>
+
+<!-- CHOOSE YOUR FISH FOR YOUR HAT -->
+<section class="section section-alt">
+  <div class="container text-center">
+    <div class="reveal">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="margin:0 auto 1.25rem;display:block;"><path d="M18 9l2 1-2 1m-12-2l-2 1 2 1M4 12s2.5-4 8-4 8 4 8 4-2.5 4-8 4-8-4-8-4z"/><circle cx="14" cy="12" r="1" fill="var(--gold)"/></svg>
+      <h2 class="section-title mb-2">Choose Your Favorite Fish for Your Hat</h2>
+      <p class="text-muted mb-4">Customize Your Hat — select the species you chase!</p>
+    </div>
+    <div class="species-grid reveal" style="max-width:600px;margin:0 auto 2rem;">
+      <div class="species-item"><div class="species-emoji">🐟</div><div class="species-name">Bass</div></div>
+      <div class="species-item"><div class="species-emoji">🐠</div><div class="species-name">Redfish</div></div>
+      <div class="species-item"><div class="species-emoji">🐡</div><div class="species-name">Snook</div></div>
+      <div class="species-item"><div class="species-emoji">🎣</div><div class="species-name">Speckled Trout</div></div>
+      <div class="species-item"><div class="species-emoji">🐟</div><div class="species-name">Flounder</div></div>
+      <div class="species-item"><div class="species-emoji">🐠</div><div class="species-name">Striped Bass</div></div>
+      <div class="species-item"><div class="species-emoji">🐡</div><div class="species-name">Tarpon</div></div>
+      <div class="species-item"><div class="species-emoji">🐟</div><div class="species-name">Sheepshead</div></div>
+      <div class="species-item"><div class="species-emoji">🐠</div><div class="species-name">Bluefish</div></div>
+      <div class="species-item"><div class="species-emoji">🐡</div><div class="species-name">Pompano</div></div>
+      <div class="species-item"><div class="species-emoji">🐟</div><div class="species-name">Spanish Mackerel</div></div>
+      <div class="species-item"><div class="species-emoji">✏️</div><div class="species-name">Custom</div></div>
+    </div>
+    <a href="custom-hats.html" class="btn btn-gold btn-lg reveal">Customize Your Hat</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-4 reveal">
+      <div class="section-eyebrow" style="display:flex;justify-content:center;">Customer Reviews</div>
+      <h2 class="section-title">Reviews</h2>
+      <div style="color:var(--gold);font-size:1.25rem;letter-spacing:.1em;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid grid-3">
+      <div class="review-card reveal">
+        <div class="review-header"><div class="review-avatar">A</div><div><div class="review-title">Title 1</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+        <div class="review-body">"Review 1"</div>
+        <div class="review-meta">Anonymous &mdash; 6/4/2025</div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-header"><div class="review-avatar">A</div><div><div class="review-title">Title 2</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+        <div class="review-body">"Review 2"</div>
+        <div class="review-meta">Anonymous &mdash; 6/4/2025</div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-header"><div class="review-avatar">A</div><div><div class="review-title">Title 3</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+        <div class="review-body">"Review 3"</div>
+        <div class="review-meta">Anonymous &mdash; 6/4/2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RETAIL PARTNERS -->
+<section class="section section-alt">
+  <div class="container text-center">
+    <div class="reveal">
+      <div class="section-eyebrow" style="display:flex;justify-content:center;">Partners</div>
+      <h2 class="section-title">See Our Retail Partners</h2>
+      <p class="text-muted mb-4" style="max-width:540px;margin:0 auto 2rem;">FTS Fishing is available through a growing network of trusted retail partners. Find FTS gear near you.</p>
+    </div>
+    <div class="grid grid-3" style="max-width:700px;margin:0 auto 2rem;opacity:.6;">
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Tackle Shop</div>
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Lake Access</div>
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Bait &amp; Tackle</div>
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Fishing Club</div>
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Sporting Goods</div>
+      <div class="card" style="padding:1.25rem;text-align:center;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);">Online Store</div>
+    </div>
+    <a href="contact.html" class="btn btn-outline reveal">Become a Retail Partner</a>
+  </div>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>Copyright &copy; 2026 FTS Fishing &mdash; All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="about.html#partners">Contributing Partners</a>
+      <a href="about-the-team.html">About the Team</a>
+      <span style="color:rgba(255,255,255,.15);">Terms and Conditions</span>
+    </div>
+    <p style="margin-top:.5rem;font-size:.65rem;opacity:.3;">Powered by FTS Fishing</p>
+  </div>
+</footer>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="quick-view-modal">
+  <div id="qv-backdrop" style="position:absolute;inset:0;"></div>
+  <div class="modal" style="position:relative;z-index:1;">
+    <div class="modal-img"><img id="qv-img" src="" alt="Product"></div>
+    <div class="modal-body">
+      <div>
+        <div class="modal-cat" id="qv-cat"></div>
+        <div class="modal-name" id="qv-name"></div>
+        <div class="modal-price" id="qv-price"></div>
+      </div>
+      <div class="modal-btns">
+        <button class="btn btn-gold btn-full" onclick="document.getElementById('quick-view-modal').classList.remove('open');document.body.style.overflow=''">Add to Cart</button>
+        <button id="qv-close" class="btn btn-outline btn-full">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH + CART OVERLAYS (same as index) -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;color:var(--gold);flex-shrink:0;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" id="search-input" placeholder="Search products..."><button id="search-close" style="background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="search-bg" id="search-bg"><div class="search-results" id="search-results"></div></div>
+</div>
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <div class="cart-drawer">
+    <div class="cart-header"><h3>Your Cart</h3><button id="cart-close" style="background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="cart-body"><div class="cart-item"><div class="cart-thumb"></div><div><div class="cart-item-name">FTS Anglers Hat</div><div class="cart-item-qty">Qty: 1</div></div><div class="cart-item-price">$16.00</div></div><div class="cart-item"><div class="cart-thumb"></div><div><div class="cart-item-name">Tight Lines Zip Garment</div><div class="cart-item-qty">Qty: 1</div></div><div class="cart-item-price">$32.00</div></div></div>
+    <div class="cart-footer"><div class="cart-subtotal"><span>Subtotal</span><span>$48.00</span></div><div class="cart-note">Shipping &amp; taxes calculated at checkout</div><a href="shop.html" class="btn btn-gold btn-full" style="display:block;">Checkout</a><button onclick="document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow=''" class="btn btn-outline btn-full mt-2" style="display:block;">Continue Shopping</button></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
