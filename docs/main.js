@@ -156,7 +156,7 @@ document.querySelectorAll('.filter-tab').forEach(tab => {
     tab.classList.add('active');
     const filter = tab.dataset.filter;
     document.querySelectorAll('.product-item').forEach(item => {
-      if (filter === 'all' || item.dataset.category === filter || (filter === 'popular' && item.dataset.popular)) {
+      if (filter === 'all' || item.dataset.category.split(' ').includes(filter) || (filter === 'popular' && item.dataset.popular)) {
         item.style.display = '';
       } else {
         item.style.display = 'none';
