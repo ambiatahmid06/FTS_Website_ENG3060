@@ -247,45 +247,45 @@ if (newsletterForm) {
   });
 }
 
-/* ── APPAREL CAROUSEL ── */
-const carousel = document.getElementById('apparel-carousel');
-if (carousel) {
-  const track = carousel.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const prevBtn = carousel.querySelector('.carousel-btn.prev');
-  const nextBtn = carousel.querySelector('.carousel-btn.next');
-  let currentIndex = 0;
+/* ── FTS Carousel ── */
+(function () {
+  const track   = document.getElementById('fts-track');
+  const dotsEl  = document.getElementById('fts-dots');
+  if (!track) return;
 
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  const slides  = track.querySelectorAll('.fts-slide');
+  const total   = slides.length;
+  let current   = 0;
+  let timer;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'fts-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function updateDots() {
+    dotsEl.querySelectorAll('.fts-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
   }
 
-  // Next button
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCarousel();
-    });
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    updateDots();
   }
 
-  // Previous button
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCarousel();
-    });
-  }
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
 
-  // Responsive: update width on resize
-  window.addEventListener('resize', updateCarousel);
+  document.getElementById('fts-next').addEventListener('click', () => { next(); resetTimer(); });
+  document.getElementById('fts-prev').addEventListener('click', () => { prev(); resetTimer(); });
 
-  // Optional: auto-slide every 4 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  }, 4000);
+  function startTimer() { timer = setInterval(next, 3500); }
+  function resetTimer()  { clearInterval(timer); startTimer(); }
 
-  // Initial position
-  updateCarousel();
-}
+  startTimer();
+})();

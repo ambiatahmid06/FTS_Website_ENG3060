@@ -53,17 +53,18 @@
 <!-- IMAGE CAROUSEL -->
 <section class="section">
   <div class="container">
-    <div id="apparel-carousel" style="max-width:600px;margin:0 auto;position:relative;">
-      <button class="prev" style="position:absolute;top:50%;left:-30px;transform:translateY(-50%);z-index:10;">&larr;</button>
-      <div class="carousel-track-container" style="overflow:hidden;">
-        <div class="carousel-track" style="display:flex;transition:transform 0.5s ease-in-out;">
-          <img src="images/FTS_Brand_LogoPrinted.png" alt="FTS Apparel">
-          <img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/Photoroom_20240406_003102.png/:/rs=w:600" alt="FTS Apparel">
-          <img src="images/LimitedEdition_FTS_AnglerHat.png" alt="FTS Apparel">
-          <img src="images/TightLines_LogoPrintedZipGarment.png" alt="FTS Apparel">
+    <div class="fts-carousel-wrapper">
+      <button class="fts-carousel-btn fts-prev" id="fts-prev" aria-label="Previous">&#8592;</button>
+      <div class="fts-carousel-viewport">
+        <div class="fts-carousel-track" id="fts-track">
+          <div class="fts-slide"><img src="images/FTS_Brand_LogoPrinted.png" alt="FTS Apparel"></div>
+          <div class="fts-slide"><img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/Photoroom_20240406_003102.png/:/rs=w:600" alt="FTS Apparel"></div>
+          <div class="fts-slide"><img src="images/LimitedEdition_FTS_AnglerHat.png" alt="FTS Apparel"></div>
+          <div class="fts-slide"><img src="images/TightLines_LogoPrintedZipGarment.png" alt="FTS Apparel"></div>
         </div>
       </div>
-      <button class="next" style="position:absolute;top:50%;right:-30px;transform:translateY(-50%);z-index:10;">&rarr;</button>
+      <button class="fts-carousel-btn fts-next" id="fts-next" aria-label="Next">&#8594;</button>
+      <div class="fts-dots" id="fts-dots"></div>
     </div>
   </div>
 </section>
