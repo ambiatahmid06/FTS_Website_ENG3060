@@ -246,3 +246,35 @@ if (newsletterForm) {
     if (newsletterSuccess) newsletterSuccess.style.display = 'block';
   });
 }
+
+/* ── IMAGE CAROUSEL ── */
+const carouselTrack = document.querySelector('#apparel-carousel .carousel-track');
+const carouselSlides = Array.from(carouselTrack.children);
+const carouselNext = document.querySelector('#apparel-carousel .next');
+const carouselPrev = document.querySelector('#apparel-carousel .prev');
+
+let carouselIndex = 0;
+
+function updateCarousel() {
+  const slideWidth = carouselSlides[0].getBoundingClientRect().width;
+  carouselTrack.style.transform = `translateX(${-carouselIndex * slideWidth}px)`;
+}
+
+carouselNext.addEventListener('click', () => {
+  carouselIndex = (carouselIndex + 1) % carouselSlides.length;
+  updateCarousel();
+});
+
+carouselPrev.addEventListener('click', () => {
+  carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
+  updateCarousel();
+});
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+  carouselIndex = (carouselIndex + 1) % carouselSlides.length;
+  updateCarousel();
+}, 4000);
+
+// Make responsive on window resize
+window.addEventListener('resize', updateCarousel);
