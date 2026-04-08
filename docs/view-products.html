@@ -53,17 +53,17 @@
 <!-- IMAGE CAROUSEL -->
 <section class="section">
   <div class="container">
-    <div id="apparel-carousel" style="max-width:800px;margin:0 auto;">
-      <button class="prev">&larr;</button>
-      <div class="carousel-track-container">
-        <div class="carousel-track">
+    <div id="apparel-carousel" style="max-width:600px;margin:0 auto;position:relative;">
+      <button class="prev" style="position:absolute;top:50%;left:-30px;transform:translateY(-50%);z-index:10;">&larr;</button>
+      <div class="carousel-track-container" style="overflow:hidden;">
+        <div class="carousel-track" style="display:flex;transition:transform 0.5s ease-in-out;">
           <img src="images/FTS_Brand_LogoPrinted.png" alt="FTS Apparel">
           <img src="https://img1.wsimg.com/isteam/ip/1be5c267-be0b-4756-8f8e-82fbb9471481/Photoroom_20240406_003102.png/:/rs=w:600" alt="FTS Apparel">
           <img src="images/LimitedEdition_FTS_AnglerHat.png" alt="FTS Apparel">
           <img src="images/TightLines_LogoPrintedZipGarment.png" alt="FTS Apparel">
         </div>
       </div>
-      <button class="next">&rarr;</button>
+      <button class="next" style="position:absolute;top:50%;right:-30px;transform:translateY(-50%);z-index:10;">&rarr;</button>
     </div>
   </div>
 </section>

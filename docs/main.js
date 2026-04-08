@@ -247,34 +247,45 @@ if (newsletterForm) {
   });
 }
 
-/* ── IMAGE CAROUSEL ── */
-const carouselTrack = document.querySelector('#apparel-carousel .carousel-track');
-const carouselSlides = Array.from(carouselTrack.children);
-const carouselNext = document.querySelector('#apparel-carousel .next');
-const carouselPrev = document.querySelector('#apparel-carousel .prev');
+/* ── APPAREL CAROUSEL ── */
+const carousel = document.getElementById('apparel-carousel');
+if (carousel) {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  let currentIndex = 0;
 
-let carouselIndex = 0;
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
 
-function updateCarousel() {
-  const slideWidth = carouselSlides[0].getBoundingClientRect().width;
-  carouselTrack.style.transform = `translateX(${-carouselIndex * slideWidth}px)`;
+  // Next button
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+  }
+
+  // Previous button
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+  }
+
+  // Responsive: update width on resize
+  window.addEventListener('resize', updateCarousel);
+
+  // Optional: auto-slide every 4 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  }, 4000);
+
+  // Initial position
+  updateCarousel();
 }
-
-carouselNext.addEventListener('click', () => {
-  carouselIndex = (carouselIndex + 1) % carouselSlides.length;
-  updateCarousel();
-});
-
-carouselPrev.addEventListener('click', () => {
-  carouselIndex = (carouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
-  updateCarousel();
-});
-
-// Auto-slide every 4 seconds
-setInterval(() => {
-  carouselIndex = (carouselIndex + 1) % carouselSlides.length;
-  updateCarousel();
-}, 4000);
-
-// Make responsive on window resize
-window.addEventListener('resize', updateCarousel);
