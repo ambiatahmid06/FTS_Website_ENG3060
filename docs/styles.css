@@ -619,8 +619,8 @@ body.no-promo .page-content { padding-top: 52px; }
 .team-role { font-size:.68rem; text-transform:uppercase; letter-spacing:.15em; color:var(--gold); margin-bottom:.85rem; }
 .team-role.blue { color:var(--blue); }
 .team-bio { font-size:.8rem; color:var(--muted); line-height:1.65; }
-.wsu-block { max-width:680px; margin:2.5rem auto 0; background:var(--bg2); border:1px solid var(--border); padding:1.75rem 2rem; display:flex; align-items:flex-start; gap:1.5rem; text-align:left; }
-.wsu-icon { flex-shrink:0; width:80px; height:80px; border-radius:50%; background:rgba(56,189,248,.10); border:1px solid rgba(56,189,248,.25); display:flex; align-items:center; justify-content:center; font-family:var(--font-serif); font-size:1.5rem; font-weight:700; color:var(--blue); }
+.wsu-block { max-width:900px; /*was 680 px*/ margin:2.5rem auto 0; background:var(--bg2); border:1px solid var(--border); padding:1.75rem 2rem; display:flex; align-items:flex-start; gap:1.5rem; text-align:left; }
+.wsu-icon { flex-shrink:0; width:250px; height:250px; /* was 80px*/ border-radius:50%; background:rgba(56,189,248,.10); border:1px solid rgba(56,189,248,.25); display:flex; align-items:center; justify-content:center; font-family:var(--font-serif); font-size:1.5rem; font-weight:700; color:var(--blue); }
 .wsu-block h3 { font-family:var(--font-serif); color:var(--white); font-size:1rem; margin-bottom:.2rem; }
 .wsu-block p { font-size:.8rem; color:var(--muted); line-height:1.65; margin:0; }
 .social-link { display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.04); border:1px solid var(--border); padding:.65rem 1.25rem; font-size:.85rem; font-weight:700; color:var(--white); text-decoration:none; transition:border-color .2s,color .2s; }
