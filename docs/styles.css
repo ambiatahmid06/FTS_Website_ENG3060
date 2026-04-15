@@ -603,7 +603,7 @@ body.no-promo .page-content { padding-top: 52px; }
 /* ── ABOUT THE TEAM PAGE ── */
 .team-hero { position:relative; min-height:320px; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; background:linear-gradient(160deg,#071a2e 0%,#0b2240 60%,#0f3060 100%); }
 .team-hero::before { content:''; position:absolute; inset:0; background:url('images/HeroBanner.jpg') center/cover no-repeat; opacity:.22; }
-.team-hero-content { position:relative; z-index:1; padding:4rem 1.5rem 3rem; }
+.team-hero-content { position:relative; z-index:1; padding:8rem 1.5rem 3rem; }
 .team-hero-content h1 { font-family:var(--font-serif); font-size:clamp(2rem,5vw,3.2rem); color:var(--white); margin-bottom:.75rem; }
 .team-hero-content p { color:rgba(232,236,241,.65); font-size:1rem; max-width:460px; margin:0 auto; }
 .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:0 auto; }
